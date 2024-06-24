@@ -1,0 +1,115 @@
+.box {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: black;
+    background-color: #eee;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.theHeader{
+    background-color: #7b7b7b;
+    padding: 0 10px;
+    height: 120px;
+    width: 100%;
+    top: 0;
+}
+
+img {
+    width: 100%;
+}
+
+.buyandexplorebutton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.buyandexplorebutton:hover {
+    background-color: #0056b3;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    font-family: arial;
+}
+
+.card .box .flex .price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card .box p a {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card .box p a:hover {
+    opacity: 0.7;
+}
+
+.details {
+    text-align: left;
+    font-size: 18px;
+}
+
+.details {
+    margin-top: 10px;
+}
+
+/* Style the car details icons */
+.details p {
+    margin-bottom: 5px;
+}
+
+.details i {
+    margin-right: 5px;
+}
+
+/* Style the "Buy and explore" button */
+.buyandexplorebutton {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.buyandexplorebutton:hover {
+    background-color: #0056b3;
+}
+
+.icon {
+    width: 50px; /* Adjust the size of the icons as needed */
+    height: 50px;
+    margin-right: 5px; /* Add some space between the icon and text */
+}
+
+.card {
+    width: 400px;
+}

@@ -1,0 +1,752 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+body{
+  background-color: #eeeeee;
+}
+
+/*N A V  B A R*/
+.payNav{
+  padding: 20px;
+  width: 100%;
+  height: 120px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  align-content: center;
+  justify-content: center;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6 ;
+  
+}
+
+  .box {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    gap: 5px;
+    align-content: center;
+    justify-items: center;
+    cursor: pointer;
+  }
+
+  .box label{
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #262626;
+    text-align: center;
+  }
+  
+#box1 label{
+  font-weight: bolder;
+}
+
+.box .top{
+  display: flex;
+  width: 100%;
+}
+
+.conncetor-right, .connector-left{
+ position: relative;
+  top: 15px;
+  height: 2px;
+  width: 100%;
+  background-color: silver;
+  flex-basis: 45%;
+ 
+}
+
+hr{
+  width: 100%;
+  height: 2px;
+  background-color: #e6e6e6;
+}
+.top span{
+  position: relative;
+  border-radius: 50%;
+  border: silver 2px solid;
+  width: 35px;
+  height: 35px; 
+  text-align: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#span1{
+  color:#fff;
+  background-color:#007bff; 
+  border: #007bff 2px solid;
+}
+
+/* C O N T A I N E R */
+.footerCheck{
+  position: absolute;
+  margin-top: 50px;
+  width: 100%;
+}
+.container{
+  width: 100%;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 2fr 1fr;
+  padding: 1rem 4rem;
+  
+}
+.col{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 980px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.title{
+  font-size: 20px;
+  color:#333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.title h2{
+  font-size: 12px;
+}
+
+/*P A G E S*/
+
+.calculator, .cont2 ,.personalInfo, .cont3, .schedule, .cont4, .payment,.prev,.toPay{
+  transform: translateX(1000px);
+}
+.paymentOption, .calculator, .personalInfo, .schedule, .payment{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-right: 100px;
+  padding: 20px;
+  transition: .3s;
+}
+
+/*Page 1 Payment Option*/
+.payOp-Container{
+  width: 100%;
+  margin: 40px 0 40px 0;
+  background-color: #eeeeee;
+  padding: 10px 10px;
+  border-radius: 20px;
+}
+.payOp-Container input, #collect, #deliver{
+  height: 20px;
+  width: 20px;
+}
+.payOp-Container label, .schedule label{
+  font-weight: bold;
+  font-size: large;
+}
+
+.payOp-Container p{
+  color: #333;
+  margin-left: 20px;
+}
+
+
+
+/*Page 2 Calculator*/
+.highlight{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin-bottom: 20px;
+ 
+}
+
+.financeGrid .pbdName{
+  text-align: center;
+  margin-bottom: 20px;
+ 
+}
+
+.displayCalculator{
+box-shadow: 0 5px 10px rgba(0,0,0,.5);
+padding: 10px;
+
+}
+
+.financeGrid{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+  height: auto;
+}
+
+
+.balloonDiv{
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+
+}
+
+.balloonDiv .hold{
+  width: 100%;
+display: grid;
+grid-template-rows: repeat(2,1fr);
+flex-basis: 76%;
+}
+
+.balloonDiv .balVal{
+  display: flex;
+  grid-gap: 2px;
+  padding-top: 10px;
+}
+
+.balVal .text{
+  text-transform: lowercase;
+}
+
+.balloonHide, .balloonHide1{
+  display: none;
+  
+}
+
+/*Calculation Details Displayed*/
+
+.displayCalcDetails{
+  background-color: #555;
+   color: #fff;
+   padding: 10px;
+ }
+
+.calcDFlex{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.calcDFlex .detailName{
+  font-weight: 300;
+  font-size: 17px;
+  flex-basis: 70%;
+  
+}
+.calcDFlex .detailValue{
+  flex-basis: 30%;
+  display: flex;
+}
+
+.displayCalcDetails hr{
+  background-color: #fff;
+  width: 100%;
+  height: 1px;
+}
+
+/*Page 3 Personal Information*/
+.error{
+  color: red;
+  font-size: 12px;
+  font-weight: 600;
+  width: 100%;
+  padding: 5px;
+  padding-left: 8px;
+}
+
+.flex{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 10px;
+
+}
+
+.detailInput{
+  position: relative;
+  width: 100% ;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.detailInput input,select, balloonDiv input{
+  width: 100%;
+  height: 100%; 
+  border: none;
+  outline: none;
+  padding-left: 20px;
+  color: #262626;
+  font-family: Arial,sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  border: 2px solid #bbb;
+}
+
+.detailInput label{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 16px;
+  font-weight: 500;
+  pointer-events: none;
+  transition: .5s ease ;
+  color: #8e8e8e;
+  margin-left: 10px;
+  transition-duration: .5s;
+  transition-property: all;
+}
+
+
+.detailInput input:focus~label,
+.detailInput input:valid~label,
+.detailInput select:valid~label{
+  top: -2px;
+  font-size: 15px;
+  background-color:#fff;
+  color: #8e8e8e;
+  margin-left: 10px;
+}
+
+ .displayCalculator label{
+  top: -2px;
+  background-color:#fff;
+  color:  #8e8e8e;
+  margin-left: 10px;
+}
+
+
+.displayCalculator label{
+  font-weight: 500;
+  font-size: 15px;
+}
+
+
+/*Page 4 Scheduling*/
+.businessInfo{
+  display: flex;
+  height: auto;
+
+}
+
+.businessInfo .info{
+  flex-basis: 45%;
+  padding: 5px;
+}
+
+.businessInfo .divide{
+flex-basis: 5%;
+width: 5px;
+background-color: #fff;
+
+}
+.dateholder{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.date, .name{
+  color: #8e8e8e;
+}
+.times{
+  color:#333 ;
+}
+.colorChange{
+  color:#333 ;
+}
+.businessInfo .map{
+  flex-basis: 50%;
+  height: 445px;
+}
+
+.businessInfo hr{
+  height: 1px;
+}
+
+.scheduleInfo{
+  width: 100%;
+  align-content: center;
+}
+.times{
+  margin-left: 10px;
+}
+
+.scheduleOp{
+  display: flex;
+  gap: 20px;
+}
+.scheduleDate input {
+  width: 95%;
+  height: 40px;
+  border: #bbb 2px solid;
+  border-radius: 10px;
+  background-color:  #bbb ;
+}
+
+/*Page 5 Summary*/
+
+.retailer{
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+}
+.retailerName{
+  text-align: center;
+}
+.payment hr{
+  height: 1px;
+}
+
+.section2{
+  display: flex;
+  gap: 20px;
+  font-size: larger;
+  padding: 20px;
+}
+.section2 img{
+ width: 300px;
+}
+.info .carName{
+  font-size: larger;
+  color: #333;
+  font-family: 'Times New Roman', Times, serif;
+}
+.info .total{
+  font-weight: bold;
+  color:  #333;
+}
+
+.breakdown{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.tblInput{
+  display: flex;
+}
+.pbdName,.pbdAmt{
+font-size:large;
+}
+.pbdName{
+  font-weight: 500;
+}
+
+.pbdAmt{
+  font-weight: 350;
+}
+.pbdContain{
+  display: flex;
+}
+.none{
+  flex-basis: 33%;
+}
+.all{
+  flex-basis: 67%;
+}
+.pbdlist{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  row-gap: 10px;
+}
+
+.popupbar{
+  display: none;
+}
+
+/*B U T T O N S*/
+
+button{
+  position: absolute;
+  height: 50px;
+  width: 300px;
+  color: white;
+  background-color: #007bff;
+  cursor: pointer;
+  transition: .3s;
+  border-radius: 10px;
+  font-size: medium;
+  font-weight: 600;
+  transition: .3s;
+}
+
+button:hover{
+  background-color: #1c69d4;
+  font-size: larger;
+}
+
+.prev{
+  background-color: #555;
+  right: 350px;
+}
+.cont1{
+  top: 400px;
+  right: 20px ;
+  
+}
+.cont2
+{
+  top: 500px;
+  right: 20px;
+}
+.prev1{
+  top: 500px;
+}
+.cont3{
+  top: 800px;
+  right: 20px ;
+}
+
+.prev2, .prev3{
+  top: 800px;
+}
+
+.cont4{
+  top: 800px;
+  right: 20px;
+}
+
+form button{
+  position: absolute;
+  top: 910px;
+  right: 20px;
+}
+
+.prev4{
+  top: 910px;
+}
+
+
+
+/*Side bar*/
+.carDetails{
+  box-shadow: 0 5px 10px rgba(0,0,0,.5);
+  height: 510px;
+  background: none;
+  position: sticky;
+  top: 30px;
+  margin-top: 30px;
+  
+}
+
+.resInfo{
+  color: #333;
+  border: 2px #333 solid;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  text-transform: lowercase;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: .3s;
+}
+.resInfo:hover{
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  font-weight: bolder;
+}
+.carInfo{
+  display: grid;
+  grid-template-rows: (3,1fr);
+  row-gap: 10px;
+  padding: 10px;
+}
+
+.carInfo .total{
+  border-bottom: rgb(231, 230, 230) solid 1px;
+  
+}
+
+.reserve{
+  display: flex;
+  gap: 60px;
+}
+
+.extraInfo{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  border-bottom: #8e8e8e solid 2px;
+}
+
+.specs label{
+  font-weight: 400;
+  color: #333;
+}
+.specs p{
+  color: #8e8e8e;
+}
+
+.specs .model{
+  margin-left: 80px;
+  color: #262626;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.specs .total{
+  margin-left: 80px;
+  font-size: 20px;
+}
+
+.carImg{
+  width: 100%;
+  max-width: 100%;
+  height: 230px;
+}
+
+/*M E D I A   Q U R I E S*/
+/*breakpoint 1*/
+@media (max-width:1165px) {
+  button{
+    height: 40px;
+    width: 230px;
+    
+  }
+  .prev{
+    right: 20px;
+    top: 850px;
+  }
+  form button{
+    top: 800px;
+  }
+
+}
+
+/*breakpoint 2*/
+@media (max-width:1025px) {
+  /* N A V   B A R*/
+  .box label{
+    display: none;
+  }
+ 
+  /* C O N T A I N E R */
+  .container{
+    display: block;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+  .col{
+    width: 100%;
+  }
+ 
+  /*S I D E   B A R*/
+  .carDetails{
+    display: none;
+  }
+
+  /*P O P U P*/
+  .popupbar{
+    position: fixed;
+    width: 95%;
+    bottom: -100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .popupbar button{
+    position: relative;
+    width: 60px;
+    height: 30px;
+    padding-bottom: 2px;
+    font-size:20px;
+    font-weight: bolder;
+    border: #fff 3px solid;
+  }
+
+  .popupbar button:hover{
+    font-size:22px;
+  }
+  .popupInfo{
+    position: relative;
+    border-top: #007bff 5px solid;
+    background-color: #e6e6e6;
+    width: 100%;
+    display: flex;
+  }
+  .popupInfo img{
+    width: 40%;
+    margin: 10px;
+  }
+  .popupInfo .popupCarDetails{
+    flex-basis: 60%;
+  }
+
+  .resInfo{
+    display: none;
+  }
+}
+
+/*breakpoint 3*/
+
+@media (max-width:760px) {
+  button{
+    height: 40px;
+    width: 200px;
+    
+  }
+
+  .prev{
+    top: 850px;
+  }
+}
+
+/*breakpoint 4*/
+
+@media (max-width:706px) {
+  .cont1{
+  top: 470px;
+  right: 20px ;
+  
+}
+
+
+}
+
+@media (max-width:682px) {
+  .col{
+    height: 1000px;
+  }
+
+  .cont4, form button{
+    top: 900px;
+  }
+
+  .prev3,.prev4{
+    top: 950px;
+  }
+
+  .cont4, .prev3{
+    right: 10px;
+  }
+  .popupInfo{
+    display: block;
+  }
+  .popupInfo img{
+    display: none;
+  }
+
+}
+
+@media (max-width:480px)
+{
+  .cont1{
+    top: 700px;
+  }
+
+  .businessInfo{
+    display: block;
+  }
+
+  .businessInfo .map{
+    display: none;
+  }
+  .section2{
+    display: none;
+  }
+}
+
+
+
